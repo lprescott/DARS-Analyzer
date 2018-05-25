@@ -1,0 +1,334 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DARSA<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "us.presport.darsa.DARSA",
+            "projectName": "DARS Analyzer",
+            "args": "C:\\Users\\lukep.LUKE-MSI\\Desktop\\lprescott-degree-audit.pdf C:\\Users\\lukep.LUKE-MSI\\Desktop\\lprescott-degree-audit.csv"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-AFMParser<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.fontbox.afm.AFMParser",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CMapParser<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.fontbox.cmap.CMapParser",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TTFParser<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.fontbox.ttf.TTFParser",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-XMPMetadata<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.jempbox.xmp.XMPMetadata",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ConvertColorspace<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.ConvertColorspace",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Decrypt<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.Decrypt",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Encrypt<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.Encrypt",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExportFDF<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.ExportFDF",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExportXFDF<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.ExportXFDF",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExtractImages<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.ExtractImages",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ExtractText<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.ExtractText",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ImportFDF<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.ImportFDF",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ImportXFDF<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.ImportXFDF",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Overlay<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.Overlay",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OverlayPDF<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.OverlayPDF",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PDFBox<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.PDFBox",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PDFDebugger<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.PDFDebugger",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PDFMerger<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.PDFMerger",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PDFReader<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.PDFReader",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PDFSplit<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.PDFSplit",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PDFToImage<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.PDFToImage",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PdfDecompressor<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.PdfDecompressor",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PrintPDF<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.PrintPDF",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TextToPDF<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.TextToPDF",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Version<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.Version",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-WriteDecodedDoc<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.WriteDecodedDoc",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PredictorAlgorithm<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.pdmodel.graphics.predictor.PredictorAlgorithm",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PDFHighlighter<DARS Analyzer>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.pdfbox.util.PDFHighlighter",
+            "projectName": "DARS Analyzer",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach)",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 0
+        }
+    ]
+}

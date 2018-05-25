@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.util.PDFTextStripper;
@@ -18,7 +17,11 @@ import us.presport.student.Student;
 public class DARSA {
 
     public static void main(String[] args)  {
-    	
+		
+		//Create the user object, a user has a list of courses
+		Student user = new Student();
+
+		//Create a list of courses
 	    ArrayList<Course> courses = new ArrayList<Course>();
     	
     	if(args.length == 1) {
@@ -36,16 +39,7 @@ public class DARSA {
         		System.out.println("ERROR: Invalid Degree Audit Report pdf "
         				+ "supplied.");	
     		}
-    			
-    		Scanner scanner = new Scanner(System.in);
-    		System.out.print("Enter your name: ");
-    		String name = scanner.nextLine();
-    		
-    		Student user = new Student();
-    		user.setName(name);
-    		
-    		scanner.close();
-    		
+	
     		try {
 				PDDocument document = PDDocument.load(file);
 				PDFTextStripper pdfStripper = new PDFTextStripper();
@@ -139,15 +133,14 @@ public class DARSA {
     		double cumulativeGPA = findGPA(courses);
     		double departmentalGPA = findGPADepartmental(courses);
     		
-    		double number = 0.9999999999999;
     		DecimalFormat numberFormat = new DecimalFormat("#.000");
     		System.out.println("\nCumulative GPA (calculated): " + numberFormat.format(cumulativeGPA));
     		System.out.println("Departmental GPA (calculated): " + numberFormat.format(departmentalGPA));
  
     		
     	} else {
-    		System.out.println("ERROR: There was an incorrect number of command "
-    				+ "line arguments.");	
+    		System.out.println("ERROR: Invalid command "
+    				+ "line arguments detected.");	
     	} 
     }
 

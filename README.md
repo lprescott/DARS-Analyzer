@@ -9,8 +9,8 @@ A degree audit is a road map to graduation for a student, instructing them which
 ### What does this program do?
 
 DARSA takes arguments in the form:
-'''
+```
 DARSA help
 DARSA degree-audit.pdf output.csv
-''
+```
 Darsa aims to reduce time looking at a degree audit, showing a student beneficial accurate information useful to managing one's taken courses in college at SUNY Albany.

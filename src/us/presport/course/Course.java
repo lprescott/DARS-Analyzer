@@ -9,6 +9,11 @@ public class Course {
 	private String term;
 	private String code;
 	private String name;
+	private double gradeNum;
+	private String department;
+	private String codeNum;
+	private String semester;
+	private int year;
 	
 	public enum Status{
 		COMPLETED("C"),
@@ -51,6 +56,12 @@ public class Course {
 	 */
 	public void setGrade(String grade) {
 		this.grade = grade;
+
+		for(Grade g : Grade.values()){
+			if(g.getLetterGrade().equals(this.getGrade())){
+				setGradeNum(g.getGPAval());
+			}
+		}
 	}
 
 	/**
@@ -110,7 +121,79 @@ public class Course {
 		this.credit = credit;
 		this.term = term;
 		this.code = code;
-		this.name = name;
+		
+		StringBuilder nameBuilder = new StringBuilder();
+		for(char c : name.toCharArray()){
+			if(c == ','){
+				nameBuilder.append(' ');
+			} else{
+				nameBuilder.append(c);
+			}
+		}
+
+		this.name = nameBuilder.toString();
+
+		for(Grade g : Grade.values()){
+			if(g.getLetterGrade().equals(grade)){
+				setGradeNum(g.getGPAval());
+			}
+		}
+
+		StringBuilder department = new StringBuilder();
+		StringBuilder courseNumber = new StringBuilder();
+
+		for(int x = 0; x < code.toCharArray().length; x++){
+			if(x < 4){
+				department.append(code.toCharArray()[x]);
+			} else{
+				courseNumber.append(code.toCharArray()[x]);
+			}
+		}
+
+		this.setDepartment(department.toString());
+		this.setCodeNum(courseNumber.toString());
+	}
+
+		/**
+	 * @return the gradeNum
+	 */
+	public double getGradeNum() {
+		return gradeNum;
+	}
+
+	/**
+	 * @param gradeNum the gradeNum to set
+	 */
+	public void setGradeNum(double gradeNum) {
+		this.gradeNum = gradeNum;
+	}
+
+	/**
+	 * @return the department
+	 */
+	public String getDepartment() {
+		return department;
+	}
+
+	/**
+	 * @param department the department to set
+	 */
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	/**
+	 * @return the codeNum
+	 */
+	public String getCodeNum() {
+		return codeNum;
+	}
+
+	/**
+	 * @param codeNum the codeNum to set
+	 */
+	public void setCodeNum(String codeNum) {
+		this.codeNum = codeNum;
 	}
 
 	/**
@@ -197,12 +280,13 @@ public class Course {
 			this.letterGrade = letterGrade;
 		}
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return String.format("%-10s %-10s %-10s %-10s %-40s", this.getGrade(), this.getCredit(), this.getTerm(), this.getCode(), this.getName());
+		String format = String.format("%s,%s,%s,%s,%s,%s,%s", this.getGrade(), this.getGradeNum(), this.getCredit(), this.getTerm(), this.getDepartment(), this.getCodeNum(), this.getName());
+		return format;
 	}
 }

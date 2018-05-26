@@ -2,13 +2,18 @@ package us.presport.darsa;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.StringReader;
+import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.util.PDFTextStripper;
+
+import com.opencsv.CSVWriter;
 
 import us.presport.course.Course;
 import us.presport.course.Course.Status;
@@ -50,7 +55,6 @@ public class DARSA {
 			    			    
 				while( (line=bufReader.readLine()) != null )
 			    {
-					System.out.println(lineNumber + " " + line);
 				    lineNumber++;
 				    
 				    if(lineNumber == 8) {
@@ -128,28 +132,46 @@ public class DARSA {
 				e.getLocalizedMessage();
 			} 
     		
-		    System.out.println(user);
-
     		double cumulativeGPA = findGPA(courses);
     		double departmentalGPA = findGPADepartmental(courses);
     		
     		DecimalFormat numberFormat = new DecimalFormat("#.000");
-    		System.out.println("\nCumulative GPA (calculated): " + numberFormat.format(cumulativeGPA));
-    		System.out.println("Departmental GPA (calculated): " + numberFormat.format(departmentalGPA));
- 
+    		cumulativeGPA = Double.parseDouble(numberFormat.format(cumulativeGPA));
+    		departmentalGPA = Double.parseDouble(numberFormat.format(departmentalGPA));
+			try { 
+				FileOutputStream fos = new FileOutputStream(args[1]);
+				OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
+				CSVWriter writer = new CSVWriter(osw);
+				for(Course c: courses){
+					writer.writeNext(toStringArray(c));
+				}
+
+				writer.close();	
+			} catch(Exception e){
+				e.getLocalizedMessage();
+			}
     		
     	} else {
     		System.out.println("ERROR: Invalid command "
     				+ "line arguments detected.");	
     	} 
-    }
+	}
+	
+	private static String [] toStringArray(Course course){
+		ArrayList<String> courseDetails = new ArrayList<String>();
+		for (String word : course.toString().split(",")) {
+			courseDetails.add(word);
+		}
+		String [] detailsAsArray = new String[courseDetails.size()];
+		detailsAsArray = courseDetails.toArray(detailsAsArray);
+		return detailsAsArray;
+	}
 
 	private static double findGPADepartmental(ArrayList<Course> courses) {
 		double total = 0;
 		int count = 0;
 
 		for(Course c : courses) {
-			System.out.println(c);
 			
 			if(!c.getGrade().equals("IP") && c.getCode().contains("ICSI")) {
 				total+= Course.gpaToNumber(c.getGrade());
@@ -164,7 +186,6 @@ public class DARSA {
 		int count = 0;
 
 		for(Course c : courses) {
-			System.out.println(c);
 			
 			if(!c.getGrade().equals("IP")) {
 				total+= Course.gpaToNumber(c.getGrade());

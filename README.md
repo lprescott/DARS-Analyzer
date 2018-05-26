@@ -14,3 +14,14 @@ DARSA help
 DARSA degree-audit.pdf output.csv
 ```
 Darsa aims to reduce time looking at a degree audit, showing a student beneficial accurate information useful to managing one's taken courses in college at SUNY Albany.
+
+### What dependencies does this program have?
+commons-beanutils-1.9.3
+commons-lang3-3.7
+commons-logging-1.1.1
+commons-text-1.3
+fontbox-1.8.14
+getNames.py
+jempbox-1.8.14
+opencsv-4.1
+pdfbox-1.8.14
